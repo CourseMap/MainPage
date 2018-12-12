@@ -10,7 +10,6 @@ department_data.forEach(ele => {
     // console.log(index);
     // console.log(select_list.option[index].value);
 });
-
 let DataArray = [];
 function submit_data(){
     if(select_list.value == "No"){
@@ -161,7 +160,7 @@ for(let i=0; i<index; ++i){
     }
     else{
         DataArray[i].CreditType = 1;
-        DataArray[i].Shape = "Diamond";
+        DataArray[i].Shape = "Triangle";
         total_credit2 += data_json[10][i];
     }
     DataArray[i].Credits = data_json[10][i];
@@ -178,12 +177,12 @@ let Canvas = objGo(go.Diagram, "Canvas",
     "commandHandler.deletesTree": true, // Delete
     initialContentAlignment: go.Spot.Left,
     allowZoom: false, // Not to scale
-    // allowDrop: true,
 });
 Canvas.isReadOnly = true;
 Canvas.allowHorizontalScroll = false,
+// Canvas.allowVerticalScroll = false,
 Canvas.allowSelect = false;
-
+let Palette = new go.Palette("Palette");
 // Set Node Skin
 Canvas.nodeTemplate = objGo(go.Node, "Vertical",
     new go.Binding("location", "loc", go.Point.parse),
@@ -194,14 +193,14 @@ Canvas.nodeTemplate = objGo(go.Node, "Vertical",
         width: 30,
         height: 30,
         fill: "lightblue",
-
+        strokeWidth: 0,
     },
     new go.Binding("figure", "Shape")),
     objGo(go.TextBlock, "default text",
     {
         width: 120,
         margin: 10,
-        stroke: "black",
+        stroke: "#353535",
         font: "bold 20px sans-serif",
         textAlign: "center",
     },

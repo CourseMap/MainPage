@@ -48,6 +48,9 @@
         </div>
         <div id="Canvas"></div>
         <div id="UserAdd">
+            <h1 id="InputTitle">
+                使用者專區
+            </h1>
                 <input type="text" id="InputName" placeholder="課程名稱" maxlength="15" required>
             <a>
                 <select id="Grade">
@@ -94,6 +97,7 @@
             </a>
             <button id="AddButton" onclick="AddNode()">新增</button>
             <button id="UndoButton" onclick="UndoAddNode()">復原</button>
+            <button id="SaveButton" onclick="SaveNode()">儲存</button>
         </div>
         <div class="ui modal">
             <div class="content">

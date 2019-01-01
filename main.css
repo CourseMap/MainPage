@@ -123,10 +123,13 @@ img{
     height: 4rem;
     width: 12%;
 }
-#AddButton, #UndoButton{
+#AddButton, #UndoButton, #SaveButton{
     font-size: 2rem;
     margin-left:30px;
     vertical-align: middle;
     height: 4rem;
-    width: 100px;
+    width: 5%;
+}
+#InputTitle{
+    text-align: center;
 }

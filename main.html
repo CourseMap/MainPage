@@ -8,7 +8,6 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"/>
         <title>Course Map</title>
         <meta charset="utf-8">
-
     </head>
     <body>
         <div id="LoginPage">
@@ -33,6 +32,16 @@
             </div>
         </div>
         <div id="MainPage">
+
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">Home</a>
+                        <a class="navbar-brand" href="#">Main Page</a>
+                    </div>
+                </div>
+            </nav>
+
             <h1 id="information1">Information1</h1>
             <h1 id="information2">Information2</h1>
             <div class="semester_container">
@@ -48,10 +57,8 @@
         </div>
         <div id="Canvas"></div>
         <div id="UserAdd">
-            <h1 id="InputTitle">
-                使用者專區
-            </h1>
-                <input type="text" id="InputName" placeholder="課程名稱" maxlength="15" required>
+            <div id="InputTitle"><img src="./picture/user.png"></div>
+            <input type="text" id="InputName" placeholder="課程名稱" maxlength="15" required>
             <a>
                 <select id="Grade">
                     <option value="No">請選擇年級</option>
